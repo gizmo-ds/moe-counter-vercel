@@ -1,0 +1,17 @@
+{
+  "functions": {
+    "api/get.ts": {
+      "includeFiles": "themes/**"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/get/@:key",
+      "destination": "/api/get.ts"
+    },
+    {
+      "source": "/record/@:key",
+      "destination": "/api/record.ts"
+    }
+  ]
+}

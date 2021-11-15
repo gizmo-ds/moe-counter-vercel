@@ -1,0 +1,27 @@
+{
+  "name": "moe-counter-vercel",
+  "version": "1.0.0",
+  "description": "Moe-counter的Serverless版本",
+  "main": "index.js",
+  "repository": "https://github.com/GizmoOAO/moe-counter-vercel",
+  "author": "CunYu <cunyu@liuli.lol>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vc dev",
+    "build:theme": "ts-node scripts/build-theme.ts"
+  },
+  "dependencies": {
+    "deta": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/mime-types": "^2.1.1",
+    "@types/node": "^16.11.7",
+    "@vercel/node": "^1.12.1",
+    "image-size": "^1.0.0",
+    "mime-types": "^2.1.34",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4",
+    "vercel": "^23.1.2"
+  }
+}
