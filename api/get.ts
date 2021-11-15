@@ -2,9 +2,8 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 import * as path from "path";
 import Deta from "../src/base/deta";
 
-let length = 7;
-
 export default async function (req: VercelRequest, res: VercelResponse) {
+  let length = 7;
   const { theme = "moebooru" } = req.query;
   const key: string = req.query.key as string;
 
