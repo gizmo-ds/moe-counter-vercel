@@ -15,7 +15,8 @@
 <body>
   <h1>moe-counter-vercel</h1>
   <p>Moe-counter的Serverless版本</p>
-  <img src="https://moe-counter-vercel.vercel.app/get/@moe-counter-vercel.site" alt="moe-counter-vercel.site" /> <br />
+  <img src="https://moe-counter-vercel.vercel.app/get/@moe-counter-vercel.site" alt="moe-counter-vercel.site"
+    style="height:100px" /> <br />
   <a href="https://github.com/GizmoOAO/moe-counter-vercel" target="_blank" rel="noopener noreferrer">GitHub</a>
   <div id="app">
     <h5>Tool</h5>
@@ -51,6 +52,9 @@
     <h5>Markdown</h5>
     <code>![{{key?key:"demo"}}]({{url}})</code>
 
+    <h5>API</h5>
+    <code>{{api}}</code>
+
     <h3>Credits</h3>
     <ul>
       <li>
@@ -75,6 +79,9 @@
           let u = this.origin + "/get/@" + (this.key ? this.key : "demo")
           if (this.theme !== "moebooru") u += "?theme=" + this.theme
           return u
+        },
+        api() {
+          return this.origin + "/record/@" + (this.key ? this.key : "demo")
         }
       },
       methods: {
