@@ -2,7 +2,7 @@
 
 [Moe-counter](https://github.com/journey-ad/Moe-counter) 的 Serverless 版本
 
-![Moe-counter](https://moe-counter-vercel.vercel.app/get/@moe-counter-vercel.github)
+<img src="https://moe-counter-vercel.vercel.app/get/@moe-counter-vercel.github" height="100" title="moe-counter">
 
 ## Demo
 
