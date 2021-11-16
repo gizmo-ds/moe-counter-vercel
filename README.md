@@ -10,12 +10,15 @@
 
 ## Deploy on your own Vercel instance
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel&env=DETA_PROJECT_KEY)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel&env=DB_TYPE,FAUNA_SECRET,DETA_PROJECT_KEY&envDescription=Environment%20Variables&envLink=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel%23environment-variables)
 
-### DETA_PROJECT_KEY?
+### Environment Variables
 
-1. Log in to [Deta](https://web.deta.sh/).
-2. Grab your **Project Key**.
+| Key              | Description                                                                                |
+| ---------------- | ------------------------------------------------------------------------------------------ |
+| DB_TYPE          | `fauna` or `deta`                                                                          |
+| FAUNA_SECRET     | [fauna](https://fauna.com/)'s secret, if `DB_TYPE` is not fauna, please leave it blank     |
+| DETA_PROJECT_KEY | [deta](https://www.deta.sh)'s project key, if `DB_TYPE` is not deta, please leave it blank |
 
 ## Credits
 
