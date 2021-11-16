@@ -1,6 +1,7 @@
 import * as deta from "deta";
 import Base from "deta/dist/types/base";
 import { ObjectType } from "deta/dist/types/types/basic";
+import { IBase } from ".";
 
 export default class Deta {
   private db: Base;
@@ -8,6 +9,8 @@ export default class Deta {
   public constructor(project_key: string, project_base: string) {
     this.db = deta.Deta(project_key).Base(project_base);
   }
+
+  public async Init(): Promise<void> {}
 
   public async Get(key: string): Promise<any> {
     let data: ObjectType;
@@ -22,11 +25,11 @@ export default class Deta {
     return data;
   }
 
-  public async Delete(key: string) {
+  public async Delete(key: string): Promise<void> {
     await this.db.delete(key);
   }
 
-  public async Clear() {
+  public async Clear(): Promise<void> {
     const items = await this.db.fetch();
     for (const item in items.items) {
       //@ts-ignore

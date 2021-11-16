@@ -1,8 +1,9 @@
 import { VercelRequest, VercelResponse } from "@vercel/node";
 import * as path from "path";
-import Deta from "../src/base/deta";
+import { db } from "../src/db";
 
 export default async function (req: VercelRequest, res: VercelResponse) {
+  await db.Init();
   let length = 7;
   const { theme = "moebooru" } = req.query;
   const key: string = req.query.key as string;
@@ -11,7 +12,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
   if (key === "demo") {
     length = 9;
   } else {
-    data = await new Deta(process.env.DETA_PROJECT_KEY, "moe-counter").Get(key);
+    data = await db.Get(key);
   }
 
   const themesDirectory = path.resolve(process.cwd(), `themes/${theme}`);
