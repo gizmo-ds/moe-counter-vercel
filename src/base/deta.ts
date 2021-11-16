@@ -1,7 +1,6 @@
 import * as deta from "deta";
 import Base from "deta/dist/types/base";
 import { ObjectType } from "deta/dist/types/types/basic";
-import { IBase } from ".";
 
 export default class Deta {
   private db: Base;

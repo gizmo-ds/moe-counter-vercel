@@ -1,5 +1,4 @@
 import { default as fauna, Match, query as q } from "faunadb";
-import { IBase } from ".";
 
 export default class Fauna {
   private client: fauna.Client;
