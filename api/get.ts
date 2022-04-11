@@ -4,13 +4,12 @@ import { db } from "../src/db";
 
 export default async function (req: VercelRequest, res: VercelResponse) {
   await db.Init();
-  let length = 7;
-  const { theme = "moebooru" } = req.query;
+  let { theme = "moebooru", length = "7" } = req.query;
   const key: string = req.query.key as string;
 
   let data = { key, num: "0123456789" };
   if (key === "demo") {
-    length = 9;
+    length = "9";
   } else {
     data = await db.Get(key);
   }
@@ -20,7 +19,10 @@ export default async function (req: VercelRequest, res: VercelResponse) {
 
   let x = 0,
     y = 0;
-  const countArray = data.num.toString().padStart(length, "0").split("");
+  const countArray = data.num.toString().padStart(
+    parseInt(length as string),
+    "0",
+  ).split("");
   const parts = countArray.reduce((acc: any, next: string | number) => {
     const { width, height, data } = _theme[next];
     const image = `${acc}
@@ -32,7 +34,7 @@ export default async function (req: VercelRequest, res: VercelResponse) {
 
   res.setHeader(
     "cache-control",
-    "max-age=0, no-cache, no-store, must-revalidate"
+    "max-age=0, no-cache, no-store, must-revalidate",
   );
   res.setHeader("content-type", "image/svg+xml; charset=utf-8");
   res.send(`<?xml version="1.0" encoding="UTF-8"?>
