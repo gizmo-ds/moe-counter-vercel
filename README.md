@@ -8,6 +8,12 @@
 
 [https://moe-counter-vercel.vercel.app](https://moe-counter-vercel.vercel.app)
 
+## Database
+
+- [FaunaDB](https://fauna.com/)
+- [Deta](https://www.deta.sh)
+- [MongoDB](https://www.mongodb.com/) (experimental support)
+
 ## Deploy on your own Vercel instance
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel%2Ftree%2Fmain&env=DB_TYPE,FAUNA_SECRET,DETA_PROJECT_KEY,MONGODB_URI,MONGODB_COLLECTION&envDescription=%E2%9D%A4&envLink=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel%2Ftree%2Fmain%23environment-variables)
