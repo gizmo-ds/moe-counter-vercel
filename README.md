@@ -10,15 +10,17 @@
 
 ## Deploy on your own Vercel instance
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel&env=DB_TYPE,FAUNA_SECRET,DETA_PROJECT_KEY&envDescription=Environment%20Variables&envLink=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel%23environment-variables)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel%2Ftree%2Fmain&env=DB_TYPE,FAUNA_SECRET,DETA_PROJECT_KEY,MONGODB_URI,MONGODB_COLLECTION&envDescription=%E2%9D%A4&envLink=https%3A%2F%2Fgithub.com%2FGizmoOAO%2Fmoe-counter-vercel%2Ftree%2Fmain%23environment-variables)
 
 ### Environment Variables
 
-| Key              | Description                                                                                |
-| ---------------- | ------------------------------------------------------------------------------------------ |
-| DB_TYPE          | `fauna` or `deta`                                                                          |
-| FAUNA_SECRET     | [fauna](https://fauna.com/)'s secret, if `DB_TYPE` is not fauna, please leave it blank     |
-| DETA_PROJECT_KEY | [deta](https://www.deta.sh)'s project key, if `DB_TYPE` is not deta, please leave it blank |
+| Key                | Description                                                                     |
+| ------------------ | ------------------------------------------------------------------------------- |
+| DB_TYPE            | `fauna` , `deta` or `mongo`                                                     |
+| FAUNA_SECRET       | [fauna](https://fauna.com/)'s secret                                            |
+| DETA_PROJECT_KEY   | [deta](https://www.deta.sh)'s project key                                       |
+| MONGODB_URI        | [MongoDB URI](https://www.mongodb.com/docs/manual/reference/connection-string/) |
+| MONGODB_COLLECTION | MongoDB Collection, this is not required, defaults to `moe-counter`             |
 
 ## Credits
 

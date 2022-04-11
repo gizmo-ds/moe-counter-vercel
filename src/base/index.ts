@@ -1,5 +1,6 @@
 export { default as Fauna } from "./fauna";
 export { default as Deta } from "./deta";
+export { default as Mongo } from "./mongo";
 
 export interface IBase {
   Init(): Promise<void>;
