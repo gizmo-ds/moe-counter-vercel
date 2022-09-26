@@ -12,6 +12,10 @@
     {
       "source": "/record/@:key",
       "destination": "/api/record.ts"
+    },
+    {
+      "source": "/shields/@:key",
+      "destination": "/api/shields.ts"
     }
   ],
   "headers": [
@@ -24,5 +28,8 @@
         }
       ]
     }
-  ]
+  ],
+  "github": {
+    "silent": true
+  }
 }
